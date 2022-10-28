@@ -57,9 +57,9 @@ export default function ProductForm({ product }) {
   // console.log("default", defaultValues)
   // console.log("allVariantOptions", allVariantOptions)
   return (
-    <div className="rounded-2xl p-4 shadow-lg flex flex-col w-full md:w-1/3 bg-background-color">
-      <h2 className="text-2xl font-bold text-primary-color">{product.title}</h2>
-      <span className="pb-3 text-primary-color">
+    <div className="rounded-2xl p-4 shadow-lg flex flex-col w-full md:w-1/3 bg-white font-fancy-font">
+      <h2 className="text-2xl text-secondary-color">{product.title}</h2>
+      <span className="pb-3 text-secondary-color">
         {formatter.format(selectedVariant.variantPrice)}
       </span>
 
@@ -79,7 +79,7 @@ export default function ProductForm({ product }) {
       <button
         // adding the selected variant to the cart
         onClick={() => addToCart(selectedVariant)}
-        className="text-white bg-secondary-color rounded-lg px-2 py-3 hover:text-background-color hover:bg-secondary-color mt-3"
+        className="text-white bg-secondary-color rounded-lg px-2 py-3 hover:text-background-color hover:bg-accent-color mt-3"
       >
         Add To Cart
       </button>

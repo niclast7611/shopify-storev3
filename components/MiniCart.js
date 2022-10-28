@@ -46,10 +46,10 @@ export default function MiniCart({ cart }) {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+          <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity " />
         </Transition.Child>
 
-        <div className="fixed inset-0 overflow-hidden">
+        <div className="fixed inset-0 overflow-hidden font-fancy-font">
           <div className="absolute inset-0 overflow-hidden">
             <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
               <Transition.Child
@@ -62,17 +62,17 @@ export default function MiniCart({ cart }) {
                 leaveTo="translate-x-full"
               >
                 <Dialog.Panel className="pointer-events-auto w-screen max-w-md">
-                  <div className="flex h-full flex-col overflow-y-scroll bg-background-color shadow-xl">
+                  <div className="flex h-full flex-col overflow-y-scroll bg-primary-color shadow-xl">
                     <div className="flex-1 overflow-y-auto py-6 px-4 sm:px-6">
                       <div className="flex items-start justify-between">
-                        <Dialog.Title className="text-lg font-medium text-primary-color">
+                        <Dialog.Title className="text-lg font-medium text-secondary-color">
                           Shopping cart
                         </Dialog.Title>
                         <div className="ml-3 flex h-7 items-center">
                           <button
                             ref={cancelButtonRef}
                             type="button"
-                            className="-m-2 p-2 text-primary-color hover:text-gray-300"
+                            className="-m-2 p-2 text-secondary-color hover:text-gray-300"
                             onClick={() => setCartOpen(false)}
                           >
                             <span className="sr-only">Close panel</span>
@@ -115,7 +115,7 @@ export default function MiniCart({ cart }) {
 
                                   <div className="ml-4 flex flex-1 flex-col">
                                     <div>
-                                      <div className="flex justify-between text-base font-medium text-primary-color ">
+                                      <div className="flex justify-between text-base font-medium text-secondary-color ">
                                         <h3 className="hover:underline">
                                           <Link
                                             href={`/products/${product.handle}`}
@@ -134,7 +134,7 @@ export default function MiniCart({ cart }) {
                                           )}
                                         </p>
                                       </div>
-                                      <p className="mt-1 text-sm text-primary-color">
+                                      <p className="mt-1 text-sm text-secondary-color">
                                         {product.variantTitle}
                                       </p>
                                     </div>
@@ -143,7 +143,7 @@ export default function MiniCart({ cart }) {
                                         <div className="flex flex-wrap flex-col max-h-full content-center">
                                           <div className="flex items-center justify-center">
                                             <button
-                                              className="px-2 w-8 h-8 appearance-none bg-none text-xl outline-none border-2 border-solid border-transparent text-background-color pb-4 cursor-pointer bg-secondary-color rounded-full transition-all hover:border-2 hover:border-solid  hover:border-primary-color/[0.5] focus:outline-2"
+                                              className="px-2 w-8 h-8 appearance-none bg-none text-xl outline-none border-2 border-solid border-transparent text-background-color pb-4 cursor-pointer bg-accent-color rounded-full transition-all hover:border-2 hover:border-solid  hover:border-accent-color/[0.5] focus:outline-2"
                                               aria-label="Decrement value"
                                               onClick={() =>
                                                 removeCartItemQuantity(
@@ -153,11 +153,11 @@ export default function MiniCart({ cart }) {
                                             >
                                               -
                                             </button>
-                                            <span className="text-3xl pl-5 pr-5  mt-1 text-primary-color">
+                                            <span className="text-3xl pl-5 pr-5  mt-1 text-secondary-color">
                                               {product.variantQuantity}
                                             </span>
                                             <button
-                                              className="px-2 w-8 h-8 appearance-none bg-none text-xl outline-none border-2 border-solid border-transparent text-background-color pb-4 cursor-pointer bg-secondary-color rounded-full transition-all hover:border-2 hover:border-solid  hover:border-primary-color/[0.5] focus:outline-2"
+                                              className="px-2 w-8 h-8 appearance-none bg-none text-xl outline-none border-2 border-solid border-transparent text-background-color pb-4 cursor-pointer bg-accent-color rounded-full transition-all hover:border-2 hover:border-solid  hover:border-accent-color/[0.5] focus:outline-2"
                                               aria-label="Increment value"
                                               onClick={() =>
                                                 addCartItemQuantity(product.id)
@@ -172,7 +172,7 @@ export default function MiniCart({ cart }) {
                                       <div className="flex">
                                         <button
                                           type="button"
-                                          className="first-line:font-medium text-primary-color hover:text-secondary-color hover:underline disabled:opacity-10 disabled:hover:no-underline"
+                                          className="first-line:font-medium text-secondary-color hover:text-accent-color hover:underline disabled:opacity-10 disabled:hover:no-underline"
                                           onClick={() =>
                                             removeCartItem(product.id)
                                           }
@@ -188,7 +188,7 @@ export default function MiniCart({ cart }) {
                             </ul>
                           ) : (
                             <div>
-                              <p className="text-primary-color">
+                              <p className="text-secondary-color">
                                 Nothing in your cart!
                               </p>
                             </div>
@@ -198,28 +198,28 @@ export default function MiniCart({ cart }) {
                     </div>
                     {cart.length > 0 ? (
                       <div className="border-t border-gray-200 py-6 px-4 sm:px-6">
-                        <div className="flex justify-between text-base font-medium text-primary-color">
+                        <div className="flex justify-between text-base font-medium text-secondary-color">
                           <p>Subtotal</p>
                           <p>{formatter.format(cartTotal)}</p>
                         </div>
-                        <p className="mt-0.5 text-sm text-primary-color">
+                        <p className="mt-0.5 text-sm text-secondary-color">
                           Shipping and taxes calculated at checkout.
                         </p>
                         <div className="mt-6">
                           <a
                             onClick={() => clearCartWhenComplete()}
                             href={checkoutUrl}
-                            className="flex items-center justify-center rounded-md border border-transparent px-6 py-3 text-base font-medium text-background-color shadow-sm bg-secondary-color hover:bg-secondary-color"
+                            className="flex items-center justify-center rounded-md border border-transparent px-6 py-3 text-base font-medium text-background-color shadow-sm bg-secondary-color hover:bg-accent-color"
                           >
                             Checkout
                           </a>
                         </div>
-                        <div className="mt-6 flex justify-center text-center text-sm text-primary-color">
+                        <div className="mt-6 flex justify-center text-center text-sm text-secondary-color">
                           <p>
                             or <br />
                             <button
                               type="button"
-                              className="font-medium  hover:text-secondary-color"
+                              className="font-medium  hover:text-accent-color"
                               onClick={() => setCartOpen(false)}
                             >
                               Continue Shopping
