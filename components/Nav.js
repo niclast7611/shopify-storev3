@@ -13,23 +13,19 @@ export default function Nav() {
     return (cartQuantity += item?.variantQuantity);
   });
   return (
-    <header className="border-b sticky top-0 z-20 bg-primary-color">
+    <header className="border-b sticky top-0 z-20 bg-primary-color font-fancy-font">
       <div className="flex items-center justify-between max-w-6xl pt-4 pb-2 px-4 mx-auto lg:max-w-screen-xl">
         <Link href="/" passHref>
           <a className="cursor-pointer">
             <h1 className="text-2xl tracking-tight ">
-              <span className="inline text-secondary-color">Studio57</span>
-              <span className="inline text-background-color">
-                {" "}
-                Clothing Co.
-              </span>
+              <span className="inline text-secondary-color">Mesmerra</span>
+              {/* <span className="inline text-secondary-color"> Clothing Co.</span> */}
             </h1>
           </a>
         </Link>{" "}
-        text-3xl
         {/* displays cart quantity */}
         <a
-          className="text- font-bold cursor-pointer text-secondary-color"
+          className="text-xl cursor-pointer text-secondary-color"
           onClick={() => setCartOpen(!cartOpen)}
         >
           Cart ({cartQuantity})

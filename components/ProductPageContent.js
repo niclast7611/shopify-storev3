@@ -24,8 +24,8 @@ export default function ProductPageContent({ product }) {
   SwiperCore.use([Navigation, Pagination]);
 
   return (
-    <div>
-      <div className="flex flex-col justify-center items-center space-y-8 md:flex-row md:items-start md:space-y-0 md:space-x-4 lg:space-x-8 max-w-6xl w-11/12 mx-auto">
+    <div className="font-fancy-font">
+      <div className="flex flex-col justify-center items-center space-y-8 md:flex-row md:items-start md:space-y-0 md:space-x-4 lg:space-x-8 max-w-6xl w-11/12 mx-auto ">
         <div className="w-full max-w-md border rounded-2xl overflow-hidden shadow-lg md:w-1/2">
           <div className="relative h-96 w-full">
             {/* product show pages shows images for the selected product */}
@@ -46,7 +46,7 @@ export default function ProductPageContent({ product }) {
         {/* shows product form which has add to cart and diff variants */}
         <ProductForm product={product} />
       </div>
-      <p className="pt-16 space-y-8 md:space-x-4 lg:space-x-8 max-w-3xl w-11/12 mx-auto text-primary-color">
+      <p className="pt-16 space-y-8 md:space-x-4 lg:space-x-8 max-w-3xl w-11/12 mx-auto text-secondary-color">
         {product.description}
       </p>
       <RecommendedList

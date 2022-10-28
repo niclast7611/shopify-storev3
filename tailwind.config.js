@@ -7,11 +7,21 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "primary-color": "#000",
-        "secondary-color": "#577786",
-        "background-color": "#FFF",
-        "accent-color": "#64aa85",
+        "primary-color": "#fff",
+        "secondary-color": "#000",
+        "background-color": "#f9f0eb",
+        "accent-color": "#554034",
       },
+    },
+    fontFamily: {
+      "fancy-font": [
+        "Garamond",
+        "Baskerville",
+        "Baskerville Old Face",
+        "Hoefler Text",
+        "Times New Roman",
+        "serif",
+      ],
     },
   },
   plugins: [],

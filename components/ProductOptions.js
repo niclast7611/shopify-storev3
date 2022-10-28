@@ -11,7 +11,7 @@ export default function ProductOptions({
   return (
     <fieldset className="mt-3">
       {values[0] === "Default Title" ? null : (
-        <legend className="text-xl font-semibold">{name}</legend>
+        <legend className="text-xl ">{name}</legend>
       )}
       <div className="inline-flex items-center flex-wrap">
         {values[0] === "Default Title"

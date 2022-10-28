@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 export default function Home({ homePageProducts, collectionNames }) {
   // console.log(homePageProducts.length)
   return (
-    <div className="bg-background-color">
+    <div className="bg-background-color font-fancy-font">
       <Hero collectionNames={collectionNames} />
       <ProductList homePageProducts={homePageProducts} />
     </div>
